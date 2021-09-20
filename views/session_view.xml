@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+        <record id="academy_session_tree" model="ir.ui.view">
+            <field name="name">academy.session.tree</field>
+            <field name="model">academy.session</field>
+            <field name="arch" type="xml">
+                <tree string="Sessions">
+                    <field name="name"/>
+                    <field name="start_date"/>
+                    <field name="duration"/>
+                    <field name="number_seats"/>
+                    <field name="instructor_id"/>
+                    <field name="course_id"/>
+                    <field name="attendees"/>
+                </tree>
+            </field>
+        </record>
+        <record id="academy_session_form" model="ir.ui.view">
+            <field name="name">academy.session.form</field>
+            <field name="model">academy.session</field>
+            <field name="arch" type="xml">
+                <form string="Create sessions">
+                    <sheet>
+                        <group>
+                            <group string="General">
+                                <field name="name"/>
+                                <field name="number_seats"/>
+                                <field name="course_id"/>
+                                <field name="instructor_id"/>
+                                <field name="attendees"/>
+                            </group>
+                            <group string="Dates">
+                                <field name="start_date"/>
+                                <field name="duration"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="academy_session_search" model="ir.ui.view">
+           <field name="name">academy.session.search</field>
+           <field name="model">academy.session</field>
+            <field name="arch" type="xml">
+            <search string="Course search">
+              <field name="name"/>
+              <field name="number_seats"/>
+            </search>
+           </field>
+        </record>
+        <record id="action_list_session" model="ir.actions.act_window">
+            <field name="name">Session Window</field>
+            <field name="res_model">academy.session</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+<!--        <menuitem id="academy_menu" name="Academy"/>-->
+        <menuitem id="session_menu" name="Sessions" parent="academy_menu" action="action_list_session"/>
+    </data>
+</odoo>

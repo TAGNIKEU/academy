@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <record id="demo_maths" model="academy.course">
+            <field name="title">Mathematics</field>
+            <field name="description">Basics in mathematics</field>
+        </record>
+        <record id="demo_phy" model="academy.course">
+            <field name="title">Physics</field>
+            <field name="description">General concepts in Physics</field>
+        </record>
+        <record id="demo_che" model="academy.course">
+            <field name="title">Chemistry</field>
+            <field name="description">General concepts in Physics and basis in Chemistry</field>
+        </record>
+    </data>
+</odoo>
