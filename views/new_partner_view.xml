@@ -1,6 +1,5 @@
 <odoo>
     <data>
-<!--        &lt;!&ndash; Inherit Form View to Modify it &ndash;&gt;
         <record id="academy_partner_inherit" model="ir.ui.view">
             <field name="name">base.view_partner_form</field>
             <field name="model">res.partner</field>
@@ -13,6 +12,6 @@
                     <field name="sessions_ids" />
                 </xpath>
             </field>
-        </record>-->
+        </record>
     </data>
 </odoo>

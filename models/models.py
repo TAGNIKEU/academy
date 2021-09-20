@@ -36,13 +36,10 @@ class NewPartner(models.Model):
     instructor = fields.Boolean(string='Is an Instructor?', default=False)
     sessions_ids = fields.Many2many('academy.session', string='Partner Sessions')
 
-    @api.model
-    def write(self, values):
-        if values.get('duration') == 0:
-            values['number_seats'] = 100
-        return super(Session, self).write(values)
-    @api.model
-    def create(self, values):
-        # Add code here
-        return super(ClassName, self).create(values)
+    # @api.model
+    # def write(self, values):
+    #     if values.get('duration') == 0:
+    #         values['number_seats'] = 100
+    #     return super(Session, self).write(values)
+
 
